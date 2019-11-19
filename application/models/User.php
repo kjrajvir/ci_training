@@ -6,6 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class User extends CI_Model
 {
 
+
     public function listUsers(){
 
 
@@ -47,5 +48,20 @@ class User extends CI_Model
         echo "here code for update user";
     }
 
-}
+    public function listStudent($anotherDatabse){
+        $anotherDatabse->select('*');
+        $anotherDatabse->from('students');
+        $query = $anotherDatabse->get();
 
+
+        // Alternate way
+        //$this->db2 = $this->load->database('db2',true);
+        // $this->db2->select('*');
+        //$this->db2->from('students');
+        // $query = $this->db2->get();
+
+
+        $students = $query->result_array();
+        return $students;
+    }
+}

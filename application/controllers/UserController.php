@@ -7,13 +7,21 @@ class UserController extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('user');
+
+
     }
 
     public function index()
     {
-echo "<pre>";
-       $lstUsers =  $this->user->listUsers();
-print_r($lstUsers);
+        $this->db2 = $this->load->database('db2',true);
+        echo "<pre>";
+        echo "<h1>User List From DB1</h1>";
+        $lstUsers =  $this->user->listUsers();
+        print_r($lstUsers);
+        echo "<h1>Student List From DB2</h1>";
+        $listStudent = $this->user->listStudent($this->db2);
+        print_r($listStudent);
+        //$this->load->view('student_list',$data['students'=>$listStudent]);
     }
 
     public function add(){
