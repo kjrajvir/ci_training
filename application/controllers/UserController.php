@@ -17,11 +17,12 @@ class UserController extends CI_Controller {
         echo "<pre>";
         echo "<h1>User List From DB1</h1>";
         $lstUsers =  $this->user->listUsers();
+//        $lstUsers =  $this->user->searchUsingWhere();
         print_r($lstUsers);
-        echo "<h1>Student List From DB2</h1>";
+    /*    echo "<h1>Student List From DB2</h1>";
         $listStudent = $this->user->listStudent($this->db2);
         print_r($listStudent);
-        //$this->load->view('student_list',$data['students'=>$listStudent]);
+   */     //$this->load->view('student_list',$data['students'=>$listStudent]);
     }
 
     public function add(){
@@ -61,5 +62,12 @@ class UserController extends CI_Controller {
                         echo $userData['name']."<br/>";
                         echo $userData['email']."<br/>";
                         echo $userData['phone']."<br/>";
+    }
+
+    public function useOfLike(){
+        echo "<pre>";
+        $userData = $this->user->useOfLike();
+
+        print_r($userData);
     }
 }

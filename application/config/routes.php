@@ -58,3 +58,4 @@ $route['user-add'] = 'UserController/add';
 $route['user-update'] = 'UserController/edit';
 $route['user-delete'] = 'UserController/delete';
 $route['user-details'] = 'UserController/details';
+$route['user-using-like'] = 'UserController/useOfLike';
