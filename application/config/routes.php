@@ -59,3 +59,10 @@ $route['user-update'] = 'UserController/edit';
 $route['user-delete'] = 'UserController/delete';
 $route['user-details'] = 'UserController/details';
 $route['user-using-like'] = 'UserController/useOfLike';
+
+
+$route['products'] = 'ProductController/index';
+$route['categories'] = 'ProductController/listcategory';
+
+$route['admin/login'] = 'admin/LoginController/index';
+$route['admin/checklogin'] = 'admin/LoginController/checkLogin';
