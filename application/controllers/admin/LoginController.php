@@ -13,11 +13,7 @@ class LoginController extends CI_Controller
     {
         $data = $this->input->post();
 
-        if(!empty($data)){
 
-        }
-        else
-            $data = $this->input->get();
 
 
 //        print_r($this->input->get());
