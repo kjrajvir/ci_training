@@ -6,6 +6,7 @@ class LoginController extends CI_Controller
 
     public function index()
     {
+//        echo "z";die;
         $this->load->view('admin/login');
     }
 

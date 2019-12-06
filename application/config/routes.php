@@ -68,3 +68,4 @@ $route['admin/login'] = 'admin/LoginController/index';
 $route['admin/checklogin'] = 'admin/LoginController/checkLogin';
 $route['admin/index'] = 'admin/IndexController/index';
 $route['admin/student'] = 'admin/StudentController/index';
+$route['admin/student/add'] = 'admin/StudentController/add';
